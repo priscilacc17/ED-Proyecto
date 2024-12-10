@@ -5,13 +5,15 @@ public class Ticket {
     private String idVisitante;
     private String idAtraccion;
     private String fechaHora;
+    private float precio;
 
     // Constructor
-    public Ticket(String idTicket, String idVisitante, String idAtraccion, String fechaHora) {
+    public Ticket(String idTicket, String idVisitante, String idAtraccion, String fechaHora, float precio) {
         this.idTicket = idTicket;
         this.idVisitante = idVisitante;
         this.idAtraccion = idAtraccion;
         this.fechaHora = fechaHora;
+        this.precio = precio;
     }
 
     // Getters y Setters
@@ -26,4 +28,7 @@ public class Ticket {
 
     public String getFechaHora() { return fechaHora; }
     public void setFechaHora(String fechaHora) { this.fechaHora = fechaHora; }
+
+    public float getPrecio() { return precio; }
+    public void setPrecio(float precio) { this.precio = precio; }
 }

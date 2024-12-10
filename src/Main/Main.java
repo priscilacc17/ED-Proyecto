@@ -1,6 +1,6 @@
 package Main;
 
-import java.util.Arrays;
+/*import java.util.Arrays;
 import java.util.Scanner;
 
 import Controlador.*;
@@ -145,3 +145,4 @@ public class Main {
         controlador.listarParticipantes();
     }
 }
+*/
