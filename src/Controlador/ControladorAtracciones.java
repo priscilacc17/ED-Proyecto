@@ -2,6 +2,7 @@ package Controlador;
 
 import Modelo.ListaEnlazadaSimple;
 import Modelo.Atraccion;
+import java.util.*;
 
 public class ControladorAtracciones {
     private ListaEnlazadaSimple<Atraccion> atracciones;
@@ -16,12 +17,14 @@ public class ControladorAtracciones {
     }
 
     // Listar todas las atracciones
-    public void listarAtracciones() {
+    public List<Atraccion> listarAtracciones() {
+        List<Atraccion> listaAtracciones = new ArrayList<>();
         atracciones.recorrer((atraccion) -> {
-            System.out.println("ID: " + atraccion.getIdAtraccion() + ", Nombre: " + atraccion.getNombre() +
-                    ", Capacidad: " + atraccion.getCapacidadMaxima() + ", Estado: " + atraccion.getEstado());
+            listaAtracciones.add(atraccion);
         });
+        return listaAtracciones;
     }
+
 
     // Cambiar estado de una atracción
     public void cambiarEstado(String idAtraccion, String nuevoEstado) {
